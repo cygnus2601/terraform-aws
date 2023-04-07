@@ -24,7 +24,7 @@ resource "aws_ecs_task_definition" "td" {
   container_definitions = jsonencode([
     {
       name         = "app"
-      image        = "303941274326.dkr.ecr.us-east-1.amazonaws.com/app_repo"
+      image        = "XXXXXXXXXX.dkr.ecr.us-east-1.amazonaws.com/app_repo"
       cpu          = 256
       memory       = 512
       essential    = true
@@ -42,6 +42,6 @@ resource "aws_ecs_task_definition" "td" {
   cpu                = "256"
   memory             = "512"
   network_mode       = "awsvpc"
-  task_role_arn      = "arn:aws:iam::303941274326:role/aws-service-role/ecs.amazonaws.com/AWSServiceRoleForECS"
-  execution_role_arn = "arn:aws:iam::303941274326:role/aws-service-role/ecs.amazonaws.com/AWSServiceRoleForECS"
+  task_role_arn      = "arn:aws:iam::XXXXXXXXXXXXX:role/aws-service-role/ecs.amazonaws.com/AWSServiceRoleForECS"
+  execution_role_arn = "arn:aws:iam::XXXXXXXXXXXXX:role/aws-service-role/ecs.amazonaws.com/AWSServiceRoleForECS"
 }
